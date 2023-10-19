@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="hower_radius_1">#a179ff</color>
+    <color name="hower_color">#996eff</color>
+    <color name="hower_radius_2">#824eff</color>
+    <color name="BackgroundCardColor">#f2f2f2</color>
+    <color name="mtrl_btn_text_color_disabled">#61000000</color>
+    <color name="text_color">#464646</color>
+    <color name="blue_grey_600">#546e7a</color>
+    <color name="colorAccent">#3578ff</color>
+    <color name="colorPrimary">#1976d2</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="grey_60">#666666</color>
+    <color name="text_color_1">#cac9c9</color>
+    <color name="mainColor">#3578ff</color>
+    <color name="sticker_second_bg">#222222</color>
+    <color name="BackgroundColor">#ffffff</color>
+    <color name="black_transparent">#dd000000</color>
+    <color name="design_fab_shadow_end_color">@android:color/transparent</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="colorLight">#e6e6e6</color>
+
+
+</resources>

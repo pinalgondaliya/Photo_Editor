@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="center" android:id="@+id/constraint_layout_wrapper_square_view" android:layout_width="80dp" android:layout_height="80dp">
+    <androidx.cardview.widget.CardView android:layout_width="65dp" android:layout_height="65dp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:layout_marginStart="5dp" android:layout_marginEnd="5dp" app:cardBackgroundColor="@color/BackgroundCardColor" app:cardCornerRadius="8dp" app:cardElevation="0dp" app:cardMaxElevation="0dp" app:cardPreventCornerOverlap="false" app:cardUseCompatPadding="false">
+        <ImageView android:layout_gravity="center" android:id="@+id/square_view" android:layout_width="43dp" android:layout_height="43dp"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView android:id="@+id/view_selected" android:visibility="gone" android:layout_width="65dp" android:layout_height="65dp" android:layout_margin="5dp" app:cardBackgroundColor="#33000000" app:cardCornerRadius="8dp" app:cardElevation="0dp" app:cardMaxElevation="0dp" app:cardPreventCornerOverlap="false" app:cardUseCompatPadding="false"/>
+</RelativeLayout>

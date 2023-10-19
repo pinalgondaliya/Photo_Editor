@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="285dp">
+
+        <RelativeLayout
+            android:id="@+id/first_part"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="17dp">
+
+            <RelativeLayout
+                android:id="@+id/setting_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="92dp"
+                    android:layout_height="92dp"
+                    android:src="@drawable/banner_1" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_toRightOf="@+id/setting_img">
+
+                <TextView
+                    android:id="@+id/setting_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:fontFamily="@font/volte_semibold"
+                    android:includeFontPadding="false"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text="Photo Art Effect: Magic Editor"
+                    android:textColor="@color/black"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/version_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/setting_text"
+                    android:layout_marginTop="10dp"
+                    android:text="Version : 1.0"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/second_part"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/first_part"
+            android:layout_marginTop="13dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="17dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/more_app" />
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/second_part"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="17dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+            app:cardMaxElevation="7dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="false">
+
+            <RelativeLayout
+                android:id="@+id/animation_rl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/second_part"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:id="@+id/rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp">
+
+                    <ImageView
+                        android:id="@+id/img_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/setting_rate" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_rate"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/volte_regular"
+                        android:includeFontPadding="false"
+                        android:text="Rate"
+                        android:textColor="#5a5a5e" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_toRightOf="@+id/rate">
+
+                    <ImageView
+                        android:id="@+id/img_share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/setting_share" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_share"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/volte_regular"
+                        android:includeFontPadding="false"
+                        android:text="Share"
+                        android:textColor="#5a5a5e" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/privacy_policy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_toRightOf="@+id/share">
+
+                    <ImageView
+                        android:id="@+id/img_privacy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/setting_privacy_policy" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_privacy"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/volte_regular"
+                        android:includeFontPadding="false"
+                        android:text="Privacy"
+                        android:textColor="#5a5a5e" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/feedback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/privacy_policy">
+
+                    <ImageView
+                        android:id="@+id/img_feedback"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/setting_feedback" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_feedback"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/volte_regular"
+                        android:includeFontPadding="false"
+                        android:text="Feedback"
+                        android:textColor="#5a5a5e" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</RelativeLayout>

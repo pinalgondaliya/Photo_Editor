@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/backdrop_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:elevation="0dp">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/white"
+                app:contentInsetStartWithNavigation="0dp"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:theme="@style/Toolbar.Light">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="12dp"
+                    android:fontFamily="@font/volte_semibold"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="Photo Art Effect: Magic Editor"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="285dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:id="@+id/first_part"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="17dp">
+
+                <RelativeLayout
+                    android:id="@+id/setting_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="92dp"
+                        android:layout_height="92dp"
+                        android:src="@drawable/banner_1" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_toRightOf="@+id/setting_img">
+
+                    <TextView
+                        android:id="@+id/setting_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:fontFamily="@font/volte_semibold"
+                        android:includeFontPadding="false"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:singleLine="true"
+                        android:text="Photo Art Effect: Magic Editor"
+                        android:textColor="@color/black"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/version_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/setting_text"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/volte_regular"
+                        android:includeFontPadding="false"
+                        android:text="Version code here"
+                        android:textSize="13sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/second_part"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/first_part"
+                android:layout_marginTop="13dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginRight="17dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/more_app" />
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/second_part"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginRight="17dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                app:cardMaxElevation="7dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="false">
+
+                <RelativeLayout
+                    android:id="@+id/animation_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/second_part"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="17dp">
+
+                        <ImageView
+                            android:id="@+id/img_rate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="38dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/setting_rate" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/img_rate"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="6dp"
+                            android:fontFamily="@font/volte_regular"
+                            android:includeFontPadding="false"
+                            android:text="Rate"
+                            android:textColor="#5a5a5e" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="17dp"
+                        android:layout_toRightOf="@+id/rate">
+
+                        <ImageView
+                            android:id="@+id/img_share"
+                            android:layout_width="wrap_content"
+                            android:layout_height="38dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/setting_share" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/img_share"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="6dp"
+                            android:fontFamily="@font/volte_regular"
+                            android:includeFontPadding="false"
+                            android:text="Share"
+                            android:textColor="#5a5a5e" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/privacy_policy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="17dp"
+                        android:layout_toRightOf="@+id/share">
+
+                        <ImageView
+                            android:id="@+id/img_privacy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="38dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/setting_privacy_policy" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/img_privacy"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="6dp"
+                            android:fontFamily="@font/volte_regular"
+                            android:includeFontPadding="false"
+                            android:text="Privacy"
+                            android:textColor="#5a5a5e" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/feedback"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/privacy_policy">
+
+                        <ImageView
+                            android:id="@+id/img_feedback"
+                            android:layout_width="wrap_content"
+                            android:layout_height="38dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/setting_feedback" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/img_feedback"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="6dp"
+                            android:fontFamily="@font/volte_regular"
+                            android:includeFontPadding="false"
+                            android:text="Feedback"
+                            android:textColor="#5a5a5e" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/product_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:visibility="visible"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="8dp">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/header"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/auto_scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="17dp">
+
+                    <com.example.photoeditor.Classs.AutoScrollViewPager
+                        android:id="@+id/viewpager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </RelativeLayout>
+
+                <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                    android:id="@+id/dots_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/auto_scroll"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    app:dotsColor="#dadada"
+                    app:dotsCornerRadius="8dp"
+                    app:dotsSize="7dp"
+                    app:dotsSpacing="2dp"
+                    app:progressMode="true"
+                    app:selectedDotColor="@color/hower_color" />
+
+                <View
+                    android:id="@+id/view_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_below="@+id/dots_indicator" />
+
+                <RelativeLayout
+                    android:id="@+id/first_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_1">
+
+                    <RelativeLayout
+                        android:id="@+id/more_tools"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="18dp"
+                            android:fontFamily="@font/volte_semibold"
+                            android:includeFontPadding="false"
+                            android:text="Start Creating"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="17dp"
+                            android:includeFontPadding="false"
+                            android:text="See all"
+                            android:textColor="#282828"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/more_tools"
+                        android:layout_marginTop="15dp">
+
+                        <LinearLayout
+                            android:id="@+id/more_first_part"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8.5dp"
+                            android:layout_marginRight="8.5dp"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:id="@+id/art_effect"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginLeft="8.5dp"
+                                android:layout_marginRight="8.5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/b_radius">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="15dp"
+                                    android:fontFamily="@font/volte_medium"
+                                    android:includeFontPadding="false"
+                                    android:text="Art Effect"
+                                    android:textColor="@color/white"
+                                    android:textSize="18sp" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:src="@drawable/art_effect" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/photo_edit"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginLeft="8.5dp"
+                                android:layout_marginRight="8.5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/r_radius">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="15dp"
+                                    android:fontFamily="@font/volte_medium"
+                                    android:includeFontPadding="false"
+                                    android:text="Photo Edit"
+                                    android:textColor="@color/white"
+                                    android:textSize="18sp" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:src="@drawable/photo_edit" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/more_first_part"
+                            android:layout_marginLeft="8.5dp"
+                            android:layout_marginTop="17dp"
+                            android:layout_marginRight="8.5dp"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:id="@+id/photo_collage"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginLeft="8.5dp"
+                                android:layout_marginRight="8.5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/g_radius">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="15dp"
+                                    android:fontFamily="@font/volte_medium"
+                                    android:includeFontPadding="false"
+                                    android:text="Collage"
+                                    android:textColor="@color/white"
+                                    android:textSize="18sp" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:src="@drawable/photo_collage" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/photo_spiral"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginLeft="8.5dp"
+                                android:layout_marginRight="8.5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/y_radius">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="15dp"
+                                    android:fontFamily="@font/volte_medium"
+                                    android:includeFontPadding="false"
+                                    android:text="Spiral"
+                                    android:textColor="@color/black"
+                                    android:textSize="18sp" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:src="@drawable/spiral"
+                                    app:tint="@color/black" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/view_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/first_section" />
+
+                <RelativeLayout
+                    android:id="@+id/txt_photo_art"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:fontFamily="@font/volte_medium"
+                        android:includeFontPadding="false"
+                        android:text="Photo Art Effect"
+                        android:textColor="#282828"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/txt_art_see_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="17dp"
+                        android:includeFontPadding="false"
+                        android:text="See all"
+                        android:textColor="#282828" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/spiral_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_photo_art"
+                    android:layout_marginTop="15dp">
+
+                    <RelativeLayout
+                        android:id="@+id/no_internet_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="215dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:visibility="gone">
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"
+                            android:layout_centerVertical="true"
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            app:lottie_rawRes="@raw/no_internet_splash" />
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="215dp"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/view_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/spiral_horizontal" />
+
+                <RelativeLayout
+                    android:id="@+id/photo_sketch_"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_3"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginRight="17dp">
+
+                    <RelativeLayout
+                        android:id="@+id/txt_sketch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/volte_medium"
+                            android:includeFontPadding="false"
+                            android:text="Sketch Tool"
+                            android:textColor="#282828"
+                            android:textSize="18sp" />
+                    </RelativeLayout>
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/photo_sketch"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_below="@+id/txt_sketch"
+                        android:layout_marginTop="15dp"
+                        app:lottie_autoPlay="true"
+                        app:lottie_imageAssetsFolder="sketch_images"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/sketch_json" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/view_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/photo_sketch_" />
+
+                <RelativeLayout
+                    android:id="@+id/more_tools_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_4">
+
+                    <RelativeLayout
+                        android:id="@+id/txt_start"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="18dp"
+                            android:fontFamily="@font/volte_medium"
+                            android:includeFontPadding="false"
+                            android:text="More Tools"
+                            android:textColor="#282828"
+                            android:textSize="18sp" />
+                    </RelativeLayout>
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_start"
+                        android:layout_marginTop="15dp"
+                        android:scrollbars="none">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:id="@+id/photo_motion"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="17dp">
+
+                                <ImageView
+                                    android:id="@+id/img_motion"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/photo_motion" />
+
+<!--                                <com.facebook.shimmer.ShimmerFrameLayout-->
+<!--                                    android:id="@+id/a"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_alignBottom="@+id/img_motion"-->
+<!--                                    android:layout_marginLeft="20dp"-->
+<!--                                    android:layout_marginBottom="10dp"-->
+<!--                                    app:shimmer_base_alpha="1"-->
+<!--                                    app:shimmer_base_color="@color/white"-->
+<!--                                    app:shimmer_colored="true"-->
+<!--                                    app:shimmer_duration="2500"-->
+<!--                                    app:shimmer_highlight_color="#acabab">-->
+
+<!--                                    <TextView-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:fontFamily="@font/volte_medium"-->
+<!--                                        android:includeFontPadding="false"-->
+<!--                                        android:text="Motion"-->
+<!--                                        android:textColor="@color/white"-->
+<!--                                        android:textSize="16sp" />-->
+<!--                                </com.facebook.shimmer.ShimmerFrameLayout>-->
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/photo_drip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="17dp"
+                                android:layout_toRightOf="@+id/photo_motion">
+
+                                <ImageView
+                                    android:id="@+id/img_drip"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/photo_drip" />
+
+<!--                                <com.facebook.shimmer.ShimmerFrameLayout-->
+<!--                                    android:id="@+id/b"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_alignBottom="@+id/img_drip"-->
+<!--                                    android:layout_marginLeft="20dp"-->
+<!--                                    android:layout_marginBottom="10dp"-->
+<!--                                    app:shimmer_base_alpha="1"-->
+<!--                                    app:shimmer_base_color="@color/black"-->
+<!--                                    app:shimmer_colored="true"-->
+<!--                                    app:shimmer_duration="2500"-->
+<!--                                    app:shimmer_highlight_color="#919191">-->
+
+<!--                                    <TextView-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:fontFamily="@font/volte_medium"-->
+<!--                                        android:includeFontPadding="false"-->
+<!--                                        android:text="Drip"-->
+<!--                                        android:textColor="@color/black"-->
+<!--                                        android:textSize="16sp" />-->
+<!--                                </com.facebook.shimmer.ShimmerFrameLayout>-->
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/photo_pixlab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="17dp"
+                                android:layout_marginRight="17dp"
+                                android:layout_toRightOf="@+id/photo_drip">
+
+                                <ImageView
+                                    android:id="@+id/img_pixlab"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/photo_pixlab" />
+
+<!--                                <com.facebook.shimmer.ShimmerFrameLayout-->
+<!--                                    android:id="@+id/c"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_alignBottom="@+id/img_pixlab"-->
+<!--                                    android:layout_marginLeft="20dp"-->
+<!--                                    android:layout_marginBottom="10dp"-->
+<!--                                    app:shimmer_base_alpha="1"-->
+<!--                                    app:shimmer_base_color="@color/white"-->
+<!--                                    app:shimmer_colored="true"-->
+<!--                                    app:shimmer_duration="2500"-->
+<!--                                    app:shimmer_highlight_color="#acabab">-->
+
+<!--                                    <TextView-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:fontFamily="@font/volte_medium"-->
+<!--                                        android:includeFontPadding="false"-->
+<!--                                        android:text="PixLab"-->
+<!--                                        android:textColor="@color/white"-->
+<!--                                        android:textSize="16sp" />-->
+<!--                                </com.facebook.shimmer.ShimmerFrameLayout>-->
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </HorizontalScrollView>
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/view_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/more_tools_bottom" />
+
+                <RelativeLayout
+                    android:id="@+id/sketch_tools_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_5"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginRight="17dp">
+
+                    <RelativeLayout
+                        android:id="@+id/txt_splash_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/volte_medium"
+                            android:includeFontPadding="false"
+                            android:text="Splash Tools"
+                            android:textColor="#282828"
+                            android:textSize="18sp" />
+                    </RelativeLayout>
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/photo_splash"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_below="@+id/txt_splash_1"
+                        android:layout_marginTop="15dp"
+                        app:lottie_autoPlay="true"
+                        app:lottie_imageAssetsFolder="splash_images"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/splash_edit_json" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/view_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/sketch_tools_bottom" />
+
+                <RelativeLayout
+                    android:id="@+id/photo_arttt_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_6"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginRight="17dp">
+
+                    <RelativeLayout
+                        android:id="@+id/txt_art_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/volte_medium"
+                            android:includeFontPadding="false"
+                            android:text="Photo Art"
+                            android:textColor="#282828"
+                            android:textSize="18sp" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/photo_arttt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_art_1"
+                        android:layout_marginTop="15dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/photo_art" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/view_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/photo_arttt_bottom" />
+
+                <RelativeLayout
+                    android:id="@+id/photo_creation"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_below="@+id/view_7"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginRight="17dp"
+                    android:layout_marginBottom="15dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/volte_medium"
+                        android:includeFontPadding="false"
+                        android:text="Creation Here..."
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

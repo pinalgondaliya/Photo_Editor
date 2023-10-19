@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="borderAlpha" format="integer">
+    </attr>
+    <attr name="borderColor" format="color">
+    </attr>
+    <attr name="bringToFrontCurrentSticker" format="boolean">
+    </attr>
+    <attr name="showBorder" format="boolean">
+    </attr>
+    <attr name="showIcons" format="boolean">
+    </attr>
+    <attr name="animation_duration" format="integer">
+    </attr>
+    <attr name="handle_bar_color" format="color">
+    </attr>
+    <attr name="line_color" format="color">
+    </attr>
+    <attr name="line_size" format="integer">
+    </attr>
+    <attr name="need_draw_line" format="boolean">
+    </attr>
+    <attr name="need_draw_outer_line" format="boolean">
+    </attr>
+    <attr name="piece_padding" format="dimension">
+    </attr>
+    <attr name="radian" format="float">
+    </attr>
+    <attr name="selected_line_color" format="color">
+    </attr>
+    <attr name="item_width" format="integer">
+    </attr>
+    <attr name="mScrollEnabled" format="boolean">
+    </attr>
+    <attr name="mTabBackground" format="reference">
+    </attr>
+    <attr name="mTabIndicatorColor" format="color">
+    </attr>
+    <attr name="mTabIndicatorHeight" format="dimension">
+    </attr>
+    <attr name="mTabMaxWidth" format="dimension">
+    </attr>
+    <attr name="mTabMinWidth" format="dimension">
+    </attr>
+    <attr name="mTabOnScreenLimit" format="integer">
+    </attr>
+    <attr name="mTabPadding" format="dimension">
+    </attr>
+    <attr name="mTabPaddingBottom" format="dimension">
+    </attr>
+    <attr name="mTabPaddingEnd" format="dimension">
+    </attr>
+    <attr name="mTabPaddingStart" format="dimension">
+    </attr>
+    <attr name="mTabPaddingTop" format="dimension">
+    </attr>
+    <attr name="mTabSelectedTextColor" format="color">
+    </attr>
+    <attr name="mTabTextAppearance" format="reference">
+    </attr>
+    <attr name="marginHorizontal" format="dimension">
+    </attr>
+</resources>

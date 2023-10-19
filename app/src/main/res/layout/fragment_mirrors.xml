@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/BackgroundCardColor">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayoutMirrorCont"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0">
+
+        <FrameLayout
+            android:id="@+id/frameLayoutWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.example.photoeditor.Classs.SquareLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.example.photoeditor.Classs.SquareLayout
+                    android:id="@+id/squareLayout2d_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.example.photoeditor.Classs.Mirror3D_2Layer
+                            android:id="@+id/drag2D_1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/imageView2D_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/purchase_cover" />
+                        </com.example.photoeditor.Classs.Mirror3D_2Layer>
+
+                        <com.example.photoeditor.Classs.Mirror3D_2Layer
+                            android:id="@+id/drag2D_2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/imageView2D_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:src="@drawable/purchase_cover" />
+                        </com.example.photoeditor.Classs.Mirror3D_2Layer>
+                    </LinearLayout>
+                </com.example.photoeditor.Classs.SquareLayout>
+
+                <com.example.photoeditor.Classs.SquareLayout
+                    android:id="@+id/squareLayout2d_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.example.photoeditor.Classs.Mirror2D_2Layer
+                            android:id="@+id/drag2D_3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/imageView2D_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/purchase_cover" />
+                        </com.example.photoeditor.Classs.Mirror2D_2Layer>
+
+                        <com.example.photoeditor.Classs.Mirror2D_2Layer
+                            android:id="@+id/drag2D_4"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/imageView2D_4"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:src="@drawable/purchase_cover" />
+                        </com.example.photoeditor.Classs.Mirror2D_2Layer>
+                    </LinearLayout>
+                </com.example.photoeditor.Classs.SquareLayout>
+
+                <com.example.photoeditor.Classs.SquareLayout
+                    android:id="@+id/squareLayout2d_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.example.photoeditor.Classs.Mirror3D_2Layer
+                            android:id="@+id/drag2D_5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/imageView2D_5"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/purchase_cover" />
+                        </com.example.photoeditor.Classs.Mirror3D_2Layer>
+
+                        <com.example.photoeditor.Classs.Mirror3D_2Layer
+                            android:id="@+id/drag2D_6"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/imageView2D_6"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:src="@drawable/purchase_cover" />
+                        </com.example.photoeditor.Classs.Mirror3D_2Layer>
+                    </LinearLayout>
+                </com.example.photoeditor.Classs.SquareLayout>
+
+                <com.example.photoeditor.Classs.SquareLayout
+                    android:id="@+id/squareLayout2d_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <com.example.photoeditor.Classs.Mirror2D_3Layer
+                            android:id="@+id/drag2D_7"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/imageView2D_7"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:rotation="180"
+                                android:src="@drawable/purchase_cover" />
+                        </com.example.photoeditor.Classs.Mirror2D_3Layer>
+
+                        <com.example.photoeditor.Classs.Mirror2D_3Layer
+                            android:id="@+id/drag2D_8"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/imageView2D_8"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:src="@drawable/purchase_cover" />
+                        </com.example.photoeditor.Classs.Mirror2D_3Layer>
+                    </LinearLayout>
+                </com.example.photoeditor.Classs.SquareLayout>
+
+                <com.example.photoeditor.Classs.SquareLayout
+                    android:id="@+id/squareLayout2d_9"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <com.example.photoeditor.Classs.Mirror2D_3Layer
+                            android:id="@+id/drag2D_9"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/imageView2D_9"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/purchase_cover" />
+                        </com.example.photoeditor.Classs.Mirror2D_3Layer>
+
+                        <com.example.photoeditor.Classs.Mirror2D_3Layer
+                            android:id="@+id/drag2D_10"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/imageView2D_10"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:rotation="180"
+                                android:src="@drawable/purchase_cover" />
+                        </com.example.photoeditor.Classs.Mirror2D_3Layer>
+                    </LinearLayout>
+                </com.example.photoeditor.Classs.SquareLayout>
+
+                <com.example.photoeditor.Classs.SquareLayout
+                    android:id="@+id/squareLayout2d_11"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.example.photoeditor.Classs.Mirror2D_3L
+                            android:id="@+id/drag2D_11"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/imageView2D_11"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/purchase_cover" />
+                        </com.example.photoeditor.Classs.Mirror2D_3L>
+
+                        <com.example.photoeditor.Classs.Mirror2D_3L
+                            android:id="@+id/drag2D_12"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/imageView2D_12"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:src="@drawable/purchase_cover" />
+                        </com.example.photoeditor.Classs.Mirror2D_3L>
+
+                        <com.example.photoeditor.Classs.Mirror2D_3L
+                            android:id="@+id/drag2D_13"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/imageView2D_13"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:src="@drawable/purchase_cover" />
+                        </com.example.photoeditor.Classs.Mirror2D_3L>
+                    </LinearLayout>
+                </com.example.photoeditor.Classs.SquareLayout>
+
+                <com.example.photoeditor.Classs.SquareLayout
+                    android:id="@+id/squareLayout3d_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.example.photoeditor.Classs.Mirror3D_2Layer
+                            android:id="@+id/drag3D_1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/imageView3D_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/purchase_cover" />
+                        </com.example.photoeditor.Classs.Mirror3D_2Layer>
+
+                        <com.example.photoeditor.Classs.Mirror3D_2Layer
+                            android:id="@+id/drag3D_2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/imageView3D_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:src="@drawable/purchase_cover" />
+                        </com.example.photoeditor.Classs.Mirror3D_2Layer>
+                    </LinearLayout>
+                </com.example.photoeditor.Classs.SquareLayout>
+
+                <com.example.photoeditor.Classs.SquareLayout
+                    android:id="@+id/squareLayout3d_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.example.photoeditor.Classs.Mirror3D_4Layer
+                            android:id="@+id/drag3D_3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/imageView3D_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/purchase_cover" />
+                        </com.example.photoeditor.Classs.Mirror3D_4Layer>
+
+                        <com.example.photoeditor.Classs.Mirror3D_4Layer
+                            android:id="@+id/drag3D_4"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/imageView3D_4"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:src="@drawable/purchase_cover" />
+                        </com.example.photoeditor.Classs.Mirror3D_4Layer>
+
+                        <com.example.photoeditor.Classs.Mirror3D_4Layer
+                            android:id="@+id/drag3D_5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/imageView3D_5"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:src="@drawable/purchase_cover" />
+                        </com.example.photoeditor.Classs.Mirror3D_4Layer>
+
+                        <com.example.photoeditor.Classs.Mirror3D_4Layer
+                            android:id="@+id/drag3D_6"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/imageView3D_6"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:src="@drawable/purchase_cover" />
+                        </com.example.photoeditor.Classs.Mirror3D_4Layer>
+                    </LinearLayout>
+                </com.example.photoeditor.Classs.SquareLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameLayout3D_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/mirror_3d_1"
+                    android:visibility="gone" />
+            </com.example.photoeditor.Classs.SquareLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:elevation="200dp"
+                android:visibility="gone">
+
+                <ProgressBar
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+            </RelativeLayout>
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutMirrorCont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/BackgroundColor"
+        android:elevation="2dp"
+        android:paddingTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewMirror"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@+id/constraint_layout_confirm_adjust"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_layout_confirm_adjust"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:id="@+id/imageViewCloseMirror"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="5dp"
+                android:onClick="onClick"
+                android:padding="12dp"
+                android:src="@drawable/ic_round_close"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/volte_semibold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="MIRROR"
+                android:textColor="@color/text_color"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageViewSaveMirror"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginRight="5dp"
+                android:onClick="onClick"
+                android:padding="12dp"
+                android:src="@drawable/ic_round_check"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

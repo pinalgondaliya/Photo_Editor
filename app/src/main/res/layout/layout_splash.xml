@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:padding="12dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/back"
+            android:fontFamily="@font/volte_medium"
+            android:singleLine="true"
+            android:text="Splash Effect"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/save"
+            android:layout_width="90dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/save_radius"
+            android:fontFamily="@font/volte_medium"
+            android:gravity="center"
+            android:text="save"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_rl"
+        android:layout_below="@+id/header"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.example.photoeditor.Classs.PolishSplashView
+            android:id="@+id/drawingImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="matrix" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:background="#d2000000"
+            android:padding="8dp"
+            android:progressDrawable="@drawable/circular_progress_bar"
+            android:visibility="gone" />
+
+        <com.example.photoeditor.Classs.SplashBrushView
+            android:id="@+id/brushView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/relativeLayoutContainer"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageViewReset"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/round_radius"
+            android:padding="12dp"
+            android:src="@drawable/ic_rotate_left" />
+
+        <ImageView
+            android:id="@+id/imageViewZoom"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/round_radius"
+            android:padding="12dp"
+            android:src="@drawable/ic_round_zoom_in" />
+
+        <ImageView
+            android:id="@+id/imageViewFit"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/round_radius"
+            android:padding="12dp"
+            android:src="@drawable/ic_round_fullscreen_exit" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:id="@+id/seekbar_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp">
+
+            <LinearLayout
+                android:id="@+id/size_ll"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:src="@drawable/ic_size" />
+
+                <SeekBar
+                    android:id="@+id/seekBarSize"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:progressDrawable="@drawable/seekbar_drawable_progress"
+                    android:splitTrack="false"
+                    android:thumb="@drawable/thumb"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/opacity_ll"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/size_ll"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:src="@drawable/ic_opacity" />
+
+                <SeekBar
+                    android:id="@+id/seekBarOpacity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:progressDrawable="@drawable/seekbar_drawable_progress"
+                    android:splitTrack="false"
+                    android:thumb="@drawable/thumb"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/recyclerr"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@+id/seekbar_rl">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_horizontal" />
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#a6ffffff"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@+id/recyclerr"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageViewCloseSplash"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:src="@drawable/ic_round_close"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/textViewColor"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_selected"
+                android:fontFamily="@font/volte_semibold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="Color"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textViewGray"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_unslelected"
+                android:fontFamily="@font/volte_semibold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="Gray"
+                android:textColor="@color/text_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textViewManual"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_unslelected"
+                android:fontFamily="@font/volte_semibold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="Manual"
+                android:textColor="@color/text_color"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/imageViewSaveSplash"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:src="@drawable/ic_round_check"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
